@@ -5,7 +5,7 @@ import timeit
 
 from PIL import Image
 
-cam = pyfakewebcam.FakeWebcam('/dev/video1', 1280, 720)
+cam = pyfakewebcam.FakeWebcam('/dev/video2', 1280, 720)
 
 cam.print_capabilities()
 
@@ -19,10 +19,10 @@ while True:
     t2 = timeit.default_timer() 
     print('write time:{}'.format(t2-t1))
 
-    time.sleep(1/60)
+    time.sleep(0.5)
 
     t1 = timeit.default_timer() 
     cam.schedule_frame(im1)
     t2 = timeit.default_timer() 
     print('write time:{}'.format(t2-t1))
-    time.sleep(1/60)
+    time.sleep(0.5)
