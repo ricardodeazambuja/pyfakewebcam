@@ -72,15 +72,15 @@ blue[:,:,2] = 255
 red = np.zeros((480,640,3), dtype=np.uint8)
 red[:,:,0] = 255
 
-camera = pyfakewebcam.FakeWebcam('/dev/video1', 640, 480)
+camera = pyfakewebcam.FakeWebcam('/dev/video2', 640, 480)
 
 while True:
 
     camera.schedule_frame(red)
-    time.sleep(1/30.0)
+    time.sleep(0.5)
 
     camera.schedule_frame(blue)
-    time.sleep(1/30.0)
+    time.sleep(0.5)
 ```
 
 Run the following command to see the output of the fake webcam.
