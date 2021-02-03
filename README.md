@@ -87,3 +87,10 @@ Run the following command to see the output of the fake webcam.
 ```
 ffplay /dev/video1
 ```
+
+### Caveats:
+0. Clone and use `sudo pip3 install .`
+1. You may need to [install v4l2loopback from source](https://github.com/umlaeute/v4l2loopback)
+2. After that, try this: ```sudo modprobe v4l2loopback video_nr=2 card_label="fake webcam" exclusive_caps=1```
+3. Finally, run one of the examples (if it doesn't work with /dev/video2, try another) and [test it directly on your browser](https://webrtc.github.io/samples/src/content/devices/input-output/).
+4. If you need to change anything, first run ```sudo modprobe -r v4l2loopback```
