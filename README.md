@@ -85,7 +85,7 @@ while True:
 
 Run the following command to see the output of the fake webcam.
 ```
-ffplay /dev/video1
+ffplay /dev/video2
 ```
 
 ### Caveats:
